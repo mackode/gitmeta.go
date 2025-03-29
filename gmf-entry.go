@@ -1,6 +1,6 @@
 package main
 
-type GMFEntry strucy {}
+type GMFEntry struct {}
 
 func NewGMFEntry() GMFEntry {
 	return GMFEntry{}
@@ -12,7 +12,6 @@ func (g GMFEntry) Applicable(e GitMetaEntry) bool {
 
 func (g GMFEntry) Expand(e GitMetaEntry) ([]Cloneable, error) {
 	return []Cloneable{
-		URL: e.URL,
-		Dir: e.Dir,
+		{URL: e.URL, Dir: e.Dir},
 	}, nil
 }
